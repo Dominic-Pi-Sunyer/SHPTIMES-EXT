@@ -127,7 +127,20 @@ function settingfun() {
         x.style.display = "none";
     }
 }
-//dark mode toogle
+document.addEventListener('DOMContentLoaded', function() {
+    var toggleButton = document.getElementById('toggletheme');
+
+    toggleButton.addEventListener('click', function() {
+        toggleDarkMode();
+    });
+
+    // Check user preference and apply theme accordingly
+    var isDarkMode = getCookie("darkMode") === "true";
+    if (isDarkMode) {
+        document.body.classList.add("dark-mode");
+    }
+});
+
 function toggleDarkMode() {
     var element = document.body;
     element.classList.toggle("dark-mode");
@@ -137,7 +150,7 @@ function toggleDarkMode() {
     setCookie("darkMode", isDarkMode.toString(), 365);
 }
 
-//save as cookie
+// Function to set a cookie
 function setCookie(name, value, days) {
     var expires = "";
     if (days) {
@@ -145,23 +158,21 @@ function setCookie(name, value, days) {
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         expires = "; expires=" + date.toUTCString();
     }
-    document.cookie = name + "=" + value + expires + "; path=/";
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
-//get cokie vaule
+// Function to get a cookie
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
     for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1, c.length);
+        }
+        if (c.indexOf(nameEQ) == 0) {
+            return c.substring(nameEQ.length, c.length);
+        }
     }
     return null;
-}
-
-//find saved vaule
-var savedDarkMode = getCookie("darkMode");
-if (savedDarkMode === "true") {
-    document.body.classList.add("dark-mode");
 }
