@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "SHP Times",
+  "description": "Help keep you on time at SHP",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "shp.png",
+    "content_script": "index.js"
+  }
+}
