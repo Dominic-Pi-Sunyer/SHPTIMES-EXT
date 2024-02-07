@@ -2,6 +2,60 @@ function checkStatus() {
     var currentTime = new Date();
     var currentHour = currentTime.getUTCHours() - 7; // make pst
     var currentDay = currentTime.getUTCDay();
+    //Button handler belltimes open
+    document.addEventListener('DOMContentLoaded', function() {
+        var link = document.getElementById('BSID');
+        var div = document.getElementById('bells'); // Replace 'yourDivId' with the actual ID of your DIV
+        var isDivVisible = false; // Variable to keep track of the visibility state
+
+        // onClick's logic below:
+        link.addEventListener('click', function() {
+            if (isDivVisible) {
+                div.style.display = 'none'; // Hide the div
+            } else {
+                div.style.display = 'block'; // Show the div
+            }
+            isDivVisible = !isDivVisible; // Toggle the visibility state
+        });
+    });
+
+//Button handler cafe times
+    document.addEventListener('DOMContentLoaded', function() {
+        var link = document.getElementById('CFID');
+        var div = document.getElementById('myDIV'); // Replace 'yourDivId' with the actual ID of your DIV
+        var isDivVisible = false; // Variable to keep track of the visibility state
+
+        // onClick's logic below:
+        link.addEventListener('click', function() {
+            if (isDivVisible) {
+                div.style.display = 'none'; // Hide the div
+            } else {
+                div.style.display = 'block'; // Show the div
+            }
+            isDivVisible = !isDivVisible; // Toggle the visibility state
+        });
+    });
+//setting button handler
+    document.addEventListener('DOMContentLoaded', function() {
+        var link = document.getElementById('STID');
+        var div = document.getElementById('settings'); // Replace 'yourDivId' with the actual ID of your DIV
+        var isDivVisible = false; // Variable to keep track of the visibility state
+
+        // onClick's logic below:
+        link.addEventListener('click', function() {
+            if (isDivVisible) {
+                div.style.display = 'none'; // Hide the div
+            } else {
+                div.style.display = 'block'; // Show the div
+            }
+            isDivVisible = !isDivVisible; // Toggle the visibility state
+        });
+    });
+//Button handler change them
+// The handler also must go in a .js file
+    function handler() {
+        /* ... */
+    }
     // nor times
     var openingHours = [
         { start: 8, end: 8, minuteStart: 0, minuteEnd: 25 },
@@ -40,6 +94,7 @@ function bellsfun() {
         x.style.display = "none";
     }
 }
+
 function sjustfun() {
     var x = document.getElementById("sugetions");
     if (x.style.display === "none") {
