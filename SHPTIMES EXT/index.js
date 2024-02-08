@@ -76,13 +76,7 @@ function checkStatus() {
             (currentHour < timeRange.end || (currentHour == timeRange.end && currentTime.getUTCMinutes() <= timeRange.minuteEnd))
         );
     });
-    // disp status message
-    var statusMessage = document.getElementById("statusMessage");
-    if (isOpen) {
-        statusMessage.textContent = "Open";
-    } else {
-        statusMessage.textContent = "Closed";
-    }
+
 }
 checkStatus();
 setInterval(checkStatus, 60000);
