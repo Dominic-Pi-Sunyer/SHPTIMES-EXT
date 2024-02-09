@@ -18,8 +18,40 @@ function checkStatus() {
             isDivVisible = !isDivVisible; // Toggle the visibility state
         });
     });
+//Fun task button handler
+    document.addEventListener('DOMContentLoaded', function() {
+        var link = document.getElementById('funtask');
+        var div = document.getElementById('myDIV'); // Replace 'yourDivId' with the actual ID of your DIV
+        var isDivVisible = false; // Variable to keep track of the visibility state
 
+        // onClick's logic below:
+        link.addEventListener('click', function() {
+            if (isDivVisible) {
+                div.style.display = 'none'; // Hide the div
+            } else {
+                div.style.display = 'block'; // Show the div
+            }
+            isDivVisible = !isDivVisible; // Toggle the visibility state
+        });
+    });
+//calculator handler
+    document.addEventListener('DOMContentLoaded', function() {
+        var link = document.getElementById('CCID');
+        var div = document.getElementById('calculator'); // Replace 'yourDivId' with the actual ID of your DIV
+        var isDivVisible = false; // Variable to keep track of the visibility state
+
+        // onClick's logic below:
+        link.addEventListener('click', function() {
+            if (isDivVisible) {
+                div.style.display = 'none'; // Hide the div
+            } else {
+                div.style.display = 'block'; // Show the div
+            }
+            isDivVisible = !isDivVisible; // Toggle the visibility state
+        });
+    });
 //Button handler cafe times
+
     document.addEventListener('DOMContentLoaded', function() {
         var link = document.getElementById('CFID');
         var div = document.getElementById('myDIV'); // Replace 'yourDivId' with the actual ID of your DIV
