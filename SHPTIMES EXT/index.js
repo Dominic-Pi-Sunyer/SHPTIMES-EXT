@@ -21,7 +21,7 @@ function checkStatus() {
 //Fun task button handler
     document.addEventListener('DOMContentLoaded', function() {
         var link = document.getElementById('funtask');
-        var div = document.getElementById('myDIV'); // Replace 'yourDivId' with the actual ID of your DIV
+        var div = document.getElementById('funcode'); // Replace 'yourDivId' with the actual ID of your DIV
         var isDivVisible = false; // Variable to keep track of the visibility state
 
         // onClick's logic below:
