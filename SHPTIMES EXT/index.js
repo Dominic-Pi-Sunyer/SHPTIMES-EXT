@@ -108,7 +108,7 @@ function checkStatus() {
             (currentHour < timeRange.end || (currentHour == timeRange.end && currentTime.getUTCMinutes() <= timeRange.minuteEnd))
         );
     });
-
+//Bell button
 }
 checkStatus();
 setInterval(checkStatus, 60000);
