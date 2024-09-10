@@ -50,6 +50,22 @@ function checkStatus() {
             isDivVisible = !isDivVisible; // Toggle the visibility state
         });
     });
+    //besssy busstion handler
+    document.addEventListener('DOMContentLoaded', function() {
+        var link = document.getElementById('BIID');
+        var div = document.getElementById('bessy'); // Replace 'yourDivId' with the actual ID of your DIV
+        var isDivVisible = false; // Variable to keep track of the visibility state
+
+        // onClick's logic below:
+        link.addEventListener('click', function() {
+            if (isDivVisible) {
+                div.style.display = 'none'; // Hide the div
+            } else {
+                div.style.display = 'block'; // Show the div
+            }
+            isDivVisible = !isDivVisible; // Toggle the visibility state
+        });
+    });
 //Button handler cafe times
 
     document.addEventListener('DOMContentLoaded', function() {
@@ -153,6 +169,15 @@ function settingfun() {
         x.style.display = "none";
     }
 }
+function BIfuntion() {
+    var x = document.getElementById("BIID");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     var toggleButton = document.getElementById('toggletheme');
 
